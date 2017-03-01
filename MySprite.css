@@ -1,0 +1,33 @@
+.sprite {
+    background: url("MyThumb.png") no-repeat;
+}
+
+.thumbsup {
+    width: 193px;
+    height: 189px;
+    display: inline-block;
+    background-position: 0 0;
+}
+
+
+
+.thumbsdown {
+    width: 191px;
+    height: 190px;
+    display: inline-block;
+    background-position: 0 -378px;
+}
+
+.thumbsup:hover {
+    width: 194px;
+    height: 191px;
+    display: inline-block;
+    background-position: 0 -187px;
+}
+
+.thumbsdown:hover {
+    width: 191px;
+    height: 190px;
+    display: inline-block;
+    background-position: 0 -566px;
+}
