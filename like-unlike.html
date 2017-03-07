@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script>
+function likeCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.likecount) {
+            localStorage.likecount = Number(localStorage.likecount)+1;
+        } else {
+            localStorage.likecount = 1;
+        }
+        document.getElementById("likeresult").innerHTML = "Total Likes: " + localStorage.likecount + " time(s).";
+    } else {
+        document.getElementById("likeresult").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+
+function unlikeCounter() {
+    if(typeof(Storage) !== "undefined") {
+        if (localStorage.unlikecount) {
+            localStorage.unlikecount = Number(localStorage.unlikecount)+1;
+        } else {
+            localStorage.unlikecount = 1;
+        }
+        document.getElementById("unlikeresult").innerHTML = "Total Unlike: " + localStorage.unlikecount + " time(s).";
+    } else {
+        document.getElementById("unlikeresult").innerHTML = "Sorry, your browser does not support web storage...";
+    }
+}
+</script>
+</head>
+
+<body>
+	<img src="Iron Man UHD.jpg" class="pic">
+<p><button onclick="likeCounter()" type="button" class="like-btn"><img src="like.jpg" class="like-img"></button>
+<button onclick="unlikeCounter()" type="button" class="unlike-btn" img="unlike.jpg"><image src="unlike.jpg" class="unlike-img"></button></p>
+<div><span id="likeresult"></span> <span id="unlikeresult"></span></div>
+<p id="msg">Click the button to see the counter increase.</p>
+
+</body>
+
+
+<style>
+.pic {
+    width:700px;
+	height:350px;
+	margin-left:340px;
+}	
+
+.like-btn{
+	margin-left:540px;
+	position:inline-block;
+	background: url(like.jpg);
+}
+
+.unlike-btn{
+	margin-left:40px;
+	position:inline-block;
+}
+
+.like-img{
+	//background-image: url(like.jpg);
+	width:100px;
+	height:100px;
+	
+}
+
+.unlike-img{
+	//background-image: url(unlike.jpg);
+	width:100px;
+	height:100px;
+}
+
+#likeresult{
+	margin-left:500px;
+}
+
+#unlikeresult{
+	margin-left:30px;
+}
+
+#msg{
+	text-align:center;
+}
+</style>
+
+</html>
