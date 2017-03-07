@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("td").append("text");
+    });
+
+    $("#btn2").click(function(){
+        $("ol").append("<li>Appended item</li>");
+    });
+});
+</script>
+
+</head>
+
+<body>
+<table class="table">
+  <tr>
+    <th>Firstname</th>
+    <th>Id</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Vishal</td>
+    <td>118</td>
+    <td>24</td>
+  </tr>
+  <tr class="next">
+    <td><input class="name" type="text"></td>
+    <td><input class="id" type="text"></td>
+    <td><input class="age" type="text"></td>
+  </tr>
+  
+</table>
+
+<input id="btn1" type="button" value="Submit" onclick="">
+<input id="btn2" type="button" value="Add-Data" onclick="">
+
+</body>
+</html>
